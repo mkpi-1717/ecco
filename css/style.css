@@ -62,7 +62,6 @@ border-radius: 5px;
 }
 
 .logo > span:after {
-  content: "Projekt";
   position: absolute;
   color: white;
   font-size: 18px;
@@ -74,7 +73,7 @@ border-radius: 5px;
 }
 
 .logo > span:before {
-  content: "View source";
+  content: "View";
   position: absolute;
   color: white;
   font-size: 18px;
@@ -119,7 +118,9 @@ border-radius: 5px;
   transition: 0.3s;
 }
 
-
+.project {
+  text-align: center;
+}
 
 [data-aos][data-aos][data-aos-duration="50"],
 body[data-aos-duration="50"] [data-aos] {
