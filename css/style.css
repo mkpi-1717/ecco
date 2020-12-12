@@ -3,6 +3,100 @@ html {
 }
 
 /* portfolio section styles */
+nav {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  z-index: 1;
+  background-color: #fff;
+  padding: 3;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.329);
+  transition: width 0.6s linear;
+}
+
+nav.active {
+  width: 325px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  transition: width 0.6s linear;
+}
+
+nav.active ul {
+  width: 100%;
+}
+
+nav ul li {
+  transform: rotateY(0deg);
+  opacity: 0;
+  border-left: 1px solid black;
+  transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+nav.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+}
+
+nav ul a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 0;
+}
+nav ul li a i {
+  color: #0099f7;
+  margin: 0 4px 0 0;
+  width: 17px;
+  height: 10px;
+}
+
+.icon {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  padding: 0 20px;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+.icon:focus {
+  outline: 0;
+}
+
+.icon .line {
+  background-color: #5290f9;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  transition: transform 0.6s linear;
+}
+
+.icon .line2 {
+  top: auto;
+  bottom: 10px;
+}
+nav.active .icon .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+nav.active .icon .line2 {
+  transform: rotate(765deg) translateY(-5.5px);
+}
 
 .gird {
   background-color: #f2f1ed;
@@ -10,9 +104,12 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   width: 90%;
+  max-width: 1200px;
   align-items: center;
   margin: auto;
-border-radius: 5px;
+  border-radius: 5px;
+  padding-top: 2%;
+  padding-bottom: 3%;
 }
 
 .img {
@@ -25,7 +122,7 @@ border-radius: 5px;
   margin: 20px 10px;
   width: 300px;
   height: 200px;
-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .logo {
@@ -40,7 +137,7 @@ border-radius: 5px;
   line-height: 200px;
   color: white;
   font-size: 2em;
-border-radius: 5px;
+  border-radius: 5px;
   background: #0099f7;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(135deg, #0099f7, #f11712);
@@ -1064,7 +1161,7 @@ body {
 }
 main {
   display: block;
- }
+}
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -1289,7 +1386,6 @@ img {
 .container {
   width: 100%;
 }
-
 
 @media (min-width: 640px) {
   .container {
